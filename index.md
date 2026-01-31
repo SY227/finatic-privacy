@@ -1,142 +1,198 @@
-# Finatic Privacy Policy
+# FINATIC PRIVACY POLICY
+**Last Updated:** January 24, 2026
 
-**Last updated:** 2026-01-14
-
-Finatic (“Finatic”, “we”, “us”) is an iOS app that helps you build and follow a personalized financial action plan. This Privacy Policy explains what data Finatic processes, how it’s used, and the choices you have.
-
----
-
-## Summary (plain English)
-
-- **Account-based app:** Finatic uses Firebase Authentication so you can sign in with an email and password.
-- **Your plan data is stored in the cloud:** Your onboarding answers, plan summary, action plan steps, and a financial health score are stored in Google Firebase (Firestore).
-- **AI features are optional:** When you use AI features (for example, generating guidance or a daily step), the text you provide (and relevant plan context) is sent to Google Gemini through Firebase AI Logic.
-- **Voice is optional:** If you use voice input, iOS Speech Recognition processes your audio to produce text.
-- **Financial accounts are optional:** If you choose to connect accounts, Finatic uses Plaid Link to connect and fetch balances and accounts through your backend.
-- **No ads / no tracking SDKs (as implemented in this codebase).**
+Finatic (“Finatic,” “we,” “us”) is an iOS app that helps you build and follow a personalized financial action plan. This Privacy Policy explains what data we collect/process, how we use it, and your rights.
 
 ---
 
-## Data we collect/process
+## SUMMARY (PLAIN ENGLISH)
 
-### 1) Account information (Firebase Authentication)
-**What:** Email address and authentication data required to sign in.  
-**Why:** To create your account, authenticate you, and keep your plan data associated with your account.
-
-### 2) Profile & onboarding inputs (User Content)
-Finatic lets you enter information such as your name, age, family status, income/expenses, assets/debts, and other planning details, plus onboarding Q&A and optional debt list entries.
-
-**What:** Free-form text and numbers you enter (e.g., onboarding answers, debt details).  
-**Why:** To generate and personalize your plan, show progress, and drive daily recommended steps.
-
-### 3) Plan data (stored in Firebase Firestore)
-Finatic stores your plan artifacts in Firestore, including:
-- onboarding answers
-- plan summary
-- action plan steps
-- “financial health” score and timestamps
-
-**Why:** So your plan persists across logins and devices, and the app can compute progress and update your plan over time.
-
-### 4) AI processing (Google Gemini via Firebase AI Logic)
-When you use AI features, Finatic sends text to Google Gemini via Firebase AI Logic (for example, prompts built from your chat, your plan outline, and recent notes) to generate responses, plan steps, or daily guidance.
-
-**What:** The text you submit, plus context the app includes to fulfill your request (for example, plan outline and recent notes).  
-**Why:** To provide AI-generated planning assistance inside the app.
-
-### 5) Voice input (Apple Speech Recognition)
-If you enable voice features, Finatic uses iOS Speech Recognition and microphone access to convert your speech to text.
-
-**What:** Audio captured from your microphone (while you are recording) and the transcribed text.  
-**Why:** To let you dictate questions or messages.
-
-### 6) Connected financial accounts (Plaid)
-If you choose to connect accounts, Finatic uses Plaid Link to connect to your financial institution. The app requests a Plaid link token from your backend and sends a public token back to your backend after a successful link.
-
-**What:** Connection tokens and account/balance information returned through Plaid and your backend.  
-**Why:** To display linked accounts and balances inside Finatic.
-
-**Note:** Finatic does not ask for or store your bank login credentials directly. Plaid handles institution authentication during the Link flow.
+- Finatic **requires an account** to work (email + password).
+- Your plan data is stored securely in **Google Firebase** (Firestore).
+- Some plan data may also be stored in a **Google Cloud SQL database** (via a backend service that syncs plan summaries and action steps).
+- **AI features** use **Google Gemini** to generate guidance when you request it.
+- **Voice input** (if you enable it) uses **Apple Speech Recognition**.
+- We do **not** sell your data.
+- We do **not** use advertising trackers.
+- You can request deletion at any time.
+- If your account is **inactive for 12 months**, we delete or de-identify your stored Finatic account data (unless we must retain it for legal/security reasons).
 
 ---
 
-## What we do **not** do
+## DATA WE COLLECT / PROCESS
 
-- **No selling of personal data.**
-- **No third-party advertising SDKs or tracking for targeted ads** (as implemented in this codebase).
-- **No collection of precise location** for app functionality.
-
----
-
-## Third-party processing (and Apple “same/equal protection” requirement)
-
-Finatic relies on third parties to provide core features:
-
-- **Google Firebase (Authentication + Firestore):** account login and storing plan data.
-- **Google Gemini (via Firebase AI Logic):** AI-generated guidance and plan content when you use AI features.
-- **Apple iOS Speech Recognition:** optional voice-to-text.
-- **Plaid:** optional account linking and balance retrieval (via Plaid Link and your backend).
-- **Apple (StoreKit / App Store):** if you purchase subscriptions or in-app purchases, Apple processes payment information.
-
-**Same/equal protection statement:** Any third party that processes user data for Finatic is expected to provide the **same or equal protection of user data** as stated in this policy and as required by Apple’s App Review Guidelines.
+### 1) Account Information (Firebase Authentication)
+**What we collect:** Email address and authentication credentials (handled by Firebase Authentication). fileciteturn9file13 fileciteturn11file10  
+**Why:** To create and manage your account and associate your data with you.
 
 ---
 
-## Data retention & deletion
-
-### In the app / on your device
-Finatic stores some app state locally (for example, daily notes and streak-related data) to support the Daily workflow.
-
-You can remove locally stored data by deleting the app (subject to iOS behavior such as device backups/restores).
-
-### In Firebase (your Finatic account data)
-Your plan data is stored in Firestore while your account is active so you can access it across sessions/devices.
-
-**Deleting your cloud data:** If you want your account and associated cloud data deleted, contact us using the email in the “Contact” section below. We may need to verify you own the account.
-
-### Third parties (Apple / Google / Plaid)
-- **Gemini retention:** When you use AI features, the text you submit and the model’s output **may be retained by Google for up to 55 days for abuse monitoring**, per Gemini API policies.
-- **Speech Recognition:** Audio/text processed by Apple for speech recognition is handled under Apple’s policies.
-- **Plaid:** Data processed through Plaid is handled under Plaid’s policies and your financial institution’s policies.
-
-Finatic cannot directly delete data stored by Apple, Google, Plaid, or your financial institution as part of their processing. Please refer to their policies for retention and deletion options.
+### 2) User Content and Profile Information
+**What you provide:** Name, age, household/family status, income, expenses, assets, debts, onboarding answers, notes, and free‑form text. fileciteturn9file16 fileciteturn10file12 fileciteturn9file15  
+**Why:** To generate your personalized plan, daily action steps, and progress views.
 
 ---
 
-## Your choices (revoke consent / request deletion)
+### 3) Plan Data Stored in Firebase Firestore
+**Includes (examples):**
+- Onboarding answers (stored under your user document) fileciteturn11file19
+- Plan summaries and action plan steps fileciteturn9file6
+- Financial health score and “Fin Scores” (metrics) fileciteturn9file1 fileciteturn10file0
+- Login metadata such as last login timestamp (to support account management) fileciteturn11file6
 
-### Revoke consent
-- **Voice:** You can deny or revoke microphone and speech recognition permissions in iOS Settings at any time.
-- **AI:** You can stop AI processing by not using AI features (for example, “Ask David”, plan regeneration, or other AI generation actions). You can still use the non-AI parts of the app.
-- **Linked accounts:** You can choose not to connect accounts (Plaid) or stop using account linking features.
-
-### Request deletion
-- **On-device:** Deleting the app removes locally stored app data on your device.
-- **Account / cloud data:** Email us to request deletion of your Finatic account and associated Firestore data.
-- **Third parties:** For data retained by Apple/Google/Plaid as part of speech recognition, AI processing, or account linking, deletion requests are governed by those providers’ policies.
+**Why:** To persist your plan across sessions and devices, and support plan progress/history.
 
 ---
 
-## Security
+### 4) Plan Data Stored in Google Cloud SQL (via backend sync)
+Finatic may store plan summaries and action steps in a **Google Cloud SQL database** through a backend service. This is used to keep the plan consistent across sessions/devices and to support server-side syncing.
 
-We aim to minimize data and use reputable providers (Firebase, Apple frameworks, Plaid) for sensitive operations. Data transmitted to third-party services is used to provide the requested app functionality.
-
----
-
-## Children’s privacy
-
-Finatic is not directed to children under 13, and we do not knowingly collect personal information from children.
+**What is stored (examples):**
+- Action plan step rows (phase/title/detail/status and stable step_id) synced to an `action_plan_steps` SQL table via a Cloud Run endpoint. fileciteturn9file19  
+- Plan summary + steps may be fetched back from the backend (e.g., a `/fullPlan` endpoint returning `summary_md` and `steps`). fileciteturn9file6
 
 ---
 
-## Changes to this policy
+### 5) AI Processing (Google Gemini via Firebase AI Logic)
+When you use AI features, we send text data to Google Gemini (through Firebase AI Logic). fileciteturn9file1
 
-We may update this policy from time to time. The “Last updated” date at the top reflects the latest version.
+**What is sent (examples):**
+- Your input text (questions, onboarding responses, chat messages)
+- Relevant plan context (e.g., onboarding Q&A, plan outline, action steps) fileciteturn11file15  
+- Recent notes (for Daily guidance) fileciteturn10file3
+
+**Why:** To generate AI responses, planning guidance, and plan artifacts.
+
+**Gemini retention:** Google may retain submitted prompts/context and outputs for **up to 55 days** for abuse monitoring, per Gemini API policies. citeturn0search1 citeturn0search2
 
 ---
 
-## Contact
+### 6) Voice Input (Apple Speech Recognition)
+If enabled, we process audio through Apple’s Speech Recognition. fileciteturn9file0
 
-If you have questions or requests about this policy, contact:
+**What is collected/processed:**
+- Microphone audio while recording
+- Transcribed text
 
-**Email:** Simon.Yam227@gmail.com
+**Why:** To allow voice input.
+
+Audio/speech processing is governed by Apple’s privacy policies.
+
+---
+
+## WHAT WE DO NOT COLLECT
+
+- No precise location data.
+- No advertising identifiers or cross‑app tracking identifiers.
+- No third‑party tracking SDKs for ads (as implemented in this codebase).
+- No sale of personal data.
+
+---
+
+## HOW WE USE YOUR DATA
+
+We use your data to:
+- Provide app functionality (account login, plan storage, progress tracking). fileciteturn11file10
+- Generate your financial plan and action steps (when requested). fileciteturn9file6
+- Enable AI features when requested (Gemini). fileciteturn9file1
+- Provide customer support (if you contact us).
+- Maintain security and prevent abuse (including abuse monitoring by providers). citeturn0search1
+
+We do **not** use your data for advertising.
+
+---
+
+## LEGAL BASIS FOR PROCESSING (US)
+
+We process your data based on:
+- **Your consent** (voice and AI features; you can revoke permissions in iOS Settings or by not using AI features).
+- **Performance of a contract** (providing the app services you request).
+- **Legitimate business interests** (security, fraud prevention, service reliability).
+
+---
+
+## AI AND FINANCIAL GUIDANCE DISCLAIMER
+
+AI-generated content is informational only. It is **not** financial, tax, or legal advice.
+Finatic is **not** a registered investment advisor. You remain responsible for your financial decisions.
+No fiduciary relationship is created.
+
+---
+
+## DATA SHARING AND THIRD PARTIES
+
+We use trusted providers:
+- **Google Firebase** (authentication and storage) fileciteturn11file13
+- **Google Gemini** (AI processing via Firebase AI Logic) fileciteturn9file1
+- **Apple** (Speech Recognition; and App Store payments if applicable)
+
+These providers process data only to provide their services and protect your data under their policies.
+
+**Apple “same/equal protection” requirement:** Any third party that processes user data for Finatic is expected to provide the **same or equal protection of user data** as stated in this policy and required by Apple’s App Review Guidelines. citeturn0search0
+
+We do not sell or rent personal data.
+
+---
+
+## DATA RETENTION
+
+### On your device
+Some app state may be stored locally (e.g., daily notes and streak-related state) using on‑device storage. fileciteturn10file3  
+Deleting the app removes local data (subject to iOS backups/restores).
+
+### In Firebase (Firestore)
+Your data is stored while your account is active (for example: onboarding answers, plan summary, action steps, and metrics). fileciteturn11file13
+
+### In Google Cloud SQL (via backend sync)
+Plan summaries and/or action steps may also be stored in a Google Cloud SQL database through our backend sync. fileciteturn9file19 fileciteturn9file6
+
+### Inactivity deletion (12 months)
+If your account is inactive for **12 months** (no sign-in activity recorded), we delete or de-identify your stored Finatic account data (including related Firestore/SQL records), unless we must retain certain records for legal/security reasons.
+
+### Deletion requests
+You may request deletion of your account and associated data by contacting us (see Contact). We verify ownership before deletion.
+
+### Third-party retention
+Google and Apple may retain data according to their own policies (e.g., Gemini abuse monitoring retention). citeturn0search1  
+We cannot directly delete data retained by those providers; please refer to their policies.
+
+---
+
+## YOUR PRIVACY RIGHTS (CALIFORNIA & US)
+
+You have the right to:
+- Access your personal data
+- Correct your data
+- Delete your data
+- Request a copy of your data
+- Opt out of sale or sharing (we do not sell data)
+
+To exercise your rights, email us at the address below. We will verify your request before responding, and we will not discriminate against you for exercising your rights.
+
+---
+
+## SECURITY
+
+We use industry-standard safeguards and reputable providers. No system is completely secure.
+If a data breach occurs, we will notify affected users as required by law.
+
+---
+
+## CHILDREN’S PRIVACY
+
+Finatic is not intended for children under 13. We do not knowingly collect data from children.
+If we discover such data, we delete it promptly. Parents may contact us to request removal.
+
+---
+
+## CHANGES TO THIS POLICY
+
+We may update this policy from time to time. The “Last Updated” date reflects the current version.
+
+---
+
+## CONTACT
+
+For privacy questions or data requests:
+
+**Email:** privacy@finaticapp.com
