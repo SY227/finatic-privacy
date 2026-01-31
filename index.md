@@ -156,6 +156,31 @@ To exercise your rights, email us at the address below. We will verify your requ
 
 ---
 
+## Your Choices (Revoke Consent / Request Deletion)
+
+### Revoke Consent
+- **Voice:** You can deny or revoke microphone and speech permissions at any time in iOS Settings.
+- **AI:** You can stop AI processing at any time by not using AI features.
+
+### Request Deletion
+- **On-device:** Delete the app to remove locally stored data (subject to iOS backups/restores).
+- **Account / cloud data:** Email us to request deletion of your account and associated Firestore/Cloud SQL records. We verify ownership before deletion.
+- **Third parties:** Deletion requests for data retained by Apple/Google are governed by their policies.
+
+---
+
+## Security
+
+We use industry-standard safeguards and reputable providers. However, no system is completely secure. If a data breach occurs, we will notify affected users as required by law.
+
+---
+
+## Changes to This Policy
+
+We may update this policy from time to time. The “Last Updated” date reflects the current version.
+
+---
+
 ## Contact
 
 For privacy questions or data requests:
